@@ -1,11 +1,13 @@
 body{
-    font-family: Georgia;
+    font-family: Georgia, Times, Arial, sans-serif;
 }
 h1,h2,h3,h4,h5,h6{
-    font-family: Helvetica;
+    font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
-/*Шрифты платные, поэтому подключены локально.*/
+h1:hover, h4:hover, a:hover, .portfo-header-photo:hover  {
+    transform: scale(1.02, 1.02);
+}
 a, .button-file-upload{
     color: #DD3E18;
 }
@@ -29,7 +31,18 @@ header.portfo-header-container{
     background-image: url('../images/photo.jpg');
     background-position: center center;
     background-size: cover;
-    margin: 21px 0 30px 0;
+    margin: 21px 0 30px 0;  
+}
+.portfo-header{
+    animation: fadein 3s; 
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 .portfo-header-text-bottom{    
     width: 305px;
@@ -54,6 +67,11 @@ header.portfo-header-container{
     width: 100%;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
+.carousel-inner:hover{
+    transition-duration: 0.3s;
+    transform: translateY(-3px);
+    transform: scale(1.02, 1.02);
+}
 .portfo-expectations .carousel-inner{
     box-shadow: none;
 }
@@ -71,6 +89,9 @@ ol.carousel-indicators li{
     background: #DD3E18;  
     margin: 16px;
 }
+ol.carousel-indicators li:hover{
+    transform: scale(2, 2);
+}
 ol.carousel-indicators li.active{
     background: black;
 }
@@ -79,7 +100,8 @@ ol.carousel-indicators li.active{
 }
 .portfo-footer{
     width: 304px;
-    margin: 43px 0 72px 0;
+    padding-top: 43px;
+    padding-bottom: 72px;
 }
 .portfo-footer h1{
     margin-bottom: 61px;
@@ -92,6 +114,9 @@ ol.carousel-indicators li.active{
 }
 .portfo-footer-link img, .portfo-footer-form form div img{
     margin-right: 12px;
+}
+.portfo-footer-link img{
+    width: 20px;
 }
 .portfo-footer-form form input{
     height: 48px;
@@ -204,9 +229,7 @@ p.test::after { content: 'min-w 1024 LG'}
 .portfo-footer-form{
     width: 544px;
 }
-.portfo-footer-link img{
-    width: 20px;
-}
+
  }
 @media (min-width: 1440px) { 
 p.test::after { content: 'min-w 1440 XL'}
