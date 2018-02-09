@@ -204,6 +204,9 @@ p.test::after { content: 'min-w 1024 LG'}
 .portfo-footer-form{
     width: 544px;
 }
+.portfo-footer-link img{
+    width: 20px;
+}
  }
 @media (min-width: 1440px) { 
 p.test::after { content: 'min-w 1440 XL'}
